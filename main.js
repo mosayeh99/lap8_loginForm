@@ -6,7 +6,7 @@ let errorMsg = document.querySelector('.error-msg');
 
 loginBtn.onclick = (e) => {
     e.preventDefault();
-    if (nameFiled.value.toLowerCase() == 'admin' && passFiled.value == 123) {
+    if ((/admin/i).test(nameFiled.value) && (/123/).test(passFiled.value)) {
         sucessMsg.style.display = 'block';
         errorMsg.style.display = 'none';
         clearInputs();
